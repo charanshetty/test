@@ -1,0 +1,3 @@
+ConditionType,InterventionProvID,Measure Names,Parameter,PriorityLevel,EntityID,GroupName,GroupTIN,Enter ID/Name,Provider Type:,Search By
+PERS,11184228,InterventionProvID,Adjusted RAF Impact,HIGH,MHI00000,CRADLE THRU COLLEGE CARE,25439018,college,Group,Name
+PERS,19105011,InterventionProvID,Adjusted RAF Impact,HIGH,MHI00000,CRADLE THRU COLLEGE CARE,9439031,college,Group,Name

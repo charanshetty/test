@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_25">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/lib/jasperreports-6.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/lib/opencsv-3.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/WebContent/WEB-INF/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/WebContent/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/WebContent/WEB-INF/lib/itextpdf-5.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/WebContent/WEB-INF/lib/commons-digester-1.7.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/jasper-webappV10"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/WebContent/WEB-INF/lib/commons-beanutils-1.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/WebContent/WEB-INF/lib/jasperreports-fonts-6.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/WebContent/WEB-INF/lib/itext-pdfa-5.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/WebContent/WEB-INF/lib/commons-codec-1.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/WebContent/WEB-INF/lib/commons-digester-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/WebContent/WEB-INF/lib/jackson-annotations-2.1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/WebContent/WEB-INF/lib/jackson-core-2.1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/WebContent/WEB-INF/lib/jackson-databind-2.1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/WebContent/WEB-INF/lib/jasperreports-6.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/WebContent/WEB-INF/lib/png-encoder-1.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/WebContent/WEB-INF/lib/poi-3.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/WebContent/WEB-INF/lib/poi-ooxml-3.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/WebContent/WEB-INF/lib/poi-ooxml-schemas-3.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/WebContent/WEB-INF/lib/spring-beans-2.5.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/WebContent/WEB-INF/lib/spring-core-2.5.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/workspace/test/WebContent/WEB-INF/lib/velocity-1.7-dep.jar"/>
+	<classpathentry kind="output" path="build/classes/csvDataSource"/>
+</classpath>

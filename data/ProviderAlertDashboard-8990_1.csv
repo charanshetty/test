@@ -1,0 +1,6 @@
+ConditionType,InterventionProvID,Measure Names,Parameter,PriorityLevel,EntityID,GroupName,GroupTIN,Enter ID/Name,Provider Type:,Search By
+PERS,3352019,InterventionProvID,Adjusted RAF Impact,VERY HIGH,MHI00015,COLLEGE POINT PRIMARY CARE,,college,Group,Name
+PERS,4820058,InterventionProvID,Adjusted RAF Impact,VERY HIGH,MHI00008,COLLEGE PARK FAMILY CARE CENTER PHYSICIANS GROUP,10432019,college,Group,Name
+PERS,4820068,InterventionProvID,Adjusted RAF Impact,MEDIUM,MHI00008,COLLEGE PARK FAMILY CARE CENTER PHYSICIANS GROUP,23482016,college,Group,Name
+PERS,11184228,InterventionProvID,Adjusted RAF Impact,HIGH,MHI00000,CRADLE THRU COLLEGE CARE,25439018,college,Group,Name
+PERS,19105011,InterventionProvID,Adjusted RAF Impact,HIGH,MHI00000,CRADLE THRU COLLEGE CARE,9439031,college,Group,Name
