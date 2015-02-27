@@ -3,8 +3,37 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link href='http://fonts.googleapis.com/css?family=Roboto'
+	rel='stylesheet' type='text/css'>
+<link href="bootstrap.css" rel="stylesheet" media="screen">
+<script type="text/javascript"
+	src="http://localhost:8000/javascripts/api/tableau_v8.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://localhost:9080/test/index.js"></script>
+
+
+
 </head>
 <body>
+
+	<div class="container">
+		<form name="login" id="login">
+			Tableau Username: <input id="Username" name="username" type="text"><br>
+			Tableau Password: <input id="Password" name="password" type="password"><br>
+			<input id="customView" name="customView" type="hidden">
+			 <input id="submitButton" value="Submit" type="submit">
+		</form>
+	</div>
+
+
+
+
+	<!-- 	 <form name="myForm4" action="TableauServlet" method="post">
+  		Username: <input type="text" name="fname"><br>
+  		Password: <input type="text" name="lname"><br>
+  <input type="submit" value="Submit">
+</form> 
+
 <form name="myForm2" method ="get" action="ReqUrlServlet">
 	<input type="submit" value="get csv" />
 </form>
@@ -12,10 +41,10 @@
 <form name="myForm" method ="Post" action="TableauServlet">
 	<input type="submit" value="get url" />
 </form>		
-		
+	
 <form name="myForm3" method ="get" action="CsvServlet">
 	<input type="submit" value="get report" />
 </form>
-			
+	-->	
 </body>
 </html>

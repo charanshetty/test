@@ -20,6 +20,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.StringTokenizer;
 
 import javax.servlet.ServletContext;
 
@@ -57,6 +58,34 @@ public class CSVsource {
 		
 			jprintlist.add(jasperPrint2);
 		JasperPrint jasperPrint1 = getJasperP(detail,props,context);
+		jprintlist.add(jasperPrint1);
+	
+		generatePDF(jprintlist,props,context);
+		} catch (JRException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return;
+	}
+
+	public void responsetest(String FilePath,ServletContext context,StringBuffer data)throws IOException {
+        Properties props = new Properties();
+       FileInputStream fis = null;
+       fis=new FileInputStream(FilePath);
+       System.out.println(FilePath);
+       props.load(fis);
+       String detail = context.getRealPath(props.getProperty("jdbc.detailjrxml")); 
+	//	String detail = props.getProperty("jdbc.detailjrxml");
+//		String summary = "reports/Pulse8CSVDetail.jrxml";
+		String summary = context.getRealPath(props.getProperty("jdbc.summaryjrxml"));
+		System.out.println(detail);
+		List<JasperPrint> jprintlist = new ArrayList<JasperPrint>();
+		JasperPrint jasperPrint2;
+		try {
+			jasperPrint2 = getJasperStringP(summary,props,context,data);
+		
+			jprintlist.add(jasperPrint2);
+		JasperPrint jasperPrint1 = getJasperStringP(detail,props,context,data);
 		jprintlist.add(jasperPrint1);
 	
 		generatePDF(jprintlist,props,context);
@@ -107,6 +136,47 @@ public class CSVsource {
 
 	}
 
+	private JasperPrint getJasperStringP(String File,Properties props,ServletContext context,StringBuffer data) throws JRException, IOException {
+		JasperReport jasperReport = JasperCompileManager.compileReport(File);
+
+		long start = System.currentTimeMillis();
+
+		// data source filling
+
+
+		
+		Map<String, Object> parameters = new HashMap<String, Object>();
+		Set<String> states = new HashSet<String>();
+		 String a[] = data.toString().split("\n");
+		int i=1;
+		StringTokenizer st;
+		 while(i < a.length){
+		states.add(a[i].split(",")[1]);
+	System.out.println(a[i].split(",")[1]+"here");	
+		 i++;}
+		System.out.println(states.toString());
+		
+	//	parameters.put("ReportTitle", "Address Report");
+	//	parameters.put("DataFile", "pulse8Data.csv - CSV data source");
+		
+		Parameters params= new Parameters();
+	//	states= params.readCsv(context.getRealPath(props.getProperty("jdbc.paramsource")));
+		parameters.put("InterPIDs", states);
+		//parameters.put("InterventionProvID", states);
+		
+		JRCsvDataSource dataSource = new JRCsvDataSource(
+				JRLoader.getLocationInputStream(context.getRealPath(props.getProperty("jdbc.datasource"))));
+		dataSource.setRecordDelimiter("\r\n");
+		 dataSource.setUseFirstRowAsHeader(true);
+		//dataSource.setColumnNames(columnNames);
+		JasperPrint jasperPrint1 = JasperFillManager.fillReport(jasperReport,
+				parameters, dataSource);
+
+		return jasperPrint1;
+
+	}
+	
+	
 /*	public static void main(String[] args) throws JRException,
 			IOException {
 		CSVsource csvsource = new CSVsource();

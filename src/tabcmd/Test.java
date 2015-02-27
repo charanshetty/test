@@ -10,7 +10,7 @@ import javax.servlet.ServletContext;
 public class Test {
 
 	// public static void main(String[] args)
-	public void getView(ServletContext context) throws IOException {
+	public void getView(ServletContext context,String username,String password,String customView) throws IOException {
 		String filePath = "C:\\Users\\admin\\workspace\\test\\tabconfig.properties";
 		Properties property = new Properties();
 		FileInputStream fis = null;
@@ -27,9 +27,14 @@ public class Test {
 		}
 		System.out.println("here1");
 		String server = property.getProperty("uri");
-		String username = property.getProperty("username");
-		String password = property.getProperty("password");
+		//String username = property.getProperty("username");
+		//String password = property.getProperty("password");
 		String view = property.getProperty("view");
+		customView="abc";
+		view=view+"/"+username+"/"+customView;
+		//String view = property.getProperty("view");
+		System.out.println(view+"asff");
+		
 		String dest=context.getRealPath((property.getProperty("dest")));
 		/*
 		 * String server = "http://localhost:8000"; String username = "charan";
